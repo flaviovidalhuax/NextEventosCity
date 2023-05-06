@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+@layer utilities {
+  .li-decore {
+    @apply relative hover:text-app-blue;
+  }
+  .li-decore::after {
+    @apply content-[''] bg-app-blue h-[3px] w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-300;
+  }
+  .li-decore:hover::after {
+    @apply w-[100%];
+  }
+}
+@layer components {
+  .app-container {
+    @apply m-auto container p-4 lg:max-w-6xl;
+  }
+  .title-1 {
+    @apply font-black text-[48px] leading-[56px] font-Roboto;
+  }
+  .subtitle-1 {
+    @apply font-medium text-[16px] leading-[19px] font-Roboto;
+  }
+  .title-2 {
+    @apply font-medium text-[24px] leading-[28px] font-Roboto;
+  }
+  .subtitle-2 {
+    @apply font-[400] text-[16px] leading-[19px] font-Roboto;
+  }
+  .title-3 {
+    @apply font-[600] text-[20px] leading-[23px] font-Roboto;
+  }
+  .texto-1 {
+    @apply font-[400] text-[15px] leading-[18px] font-Roboto;
+  }
+  .texto-2 {
+    @apply font-medium text-[14px] leading-[16px] font-Roboto;
+  }
+
+  .app-banner {
+    @apply w-screen m-auto relative left-[calc(-50vw_+_50%)];
+  }
+  .text-gradient {
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 4%,
+      rgba(41, 181, 25, 0) 52%
+    );
+    background: -webkit-linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 4%,
+      rgba(41, 181, 25, 0) 52%
+    );
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 4%,
+      rgba(41, 181, 25, 0) 52%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff",endColorstr="#29b519",GradientType=1);
+  }
+}
+
+.fondo {
+  background: linear-gradient(
+      90deg,
+      #000000 -7.73%,
+      rgba(0, 0, 0, 0.59) 37.54%,
+      rgba(0, 0, 0, 0) 98.92%,
+      rgba(0, 0, 0, 0) 98.92%
+    ),
+    url('/Bogota.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
